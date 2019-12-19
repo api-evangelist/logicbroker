@@ -1,0 +1,52 @@
+{
+    "name": "Logicbroker",
+    "description": "<p>Logicbroker provides beautiful technology that unites brands, retailers, and the systems they rely on. Harness the latest in cloud and supply chain automation technology with unrivaled speed and integration flexibility. We craft the connections that enable digital commerce.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/logicbroker-logo.png",
+    "tags": [
+        "commerce",
+        "have api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/logicbroker\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "CommerceAPI",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/logicbroker-logo.png",
+            "humanURL": "https:\/\/www.logicbroker.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/commerceapi.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/commerceapi-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog RSS",
+            "url": "https:\/\/www.logicbroker.com\/feed\/"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/dev.logicbroker.com\/"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/stage.commerceapi.io\/swagger\/ui\/index"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.logicbroker.com\/"
+        }
+    ]
+}
