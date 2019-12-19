@@ -1,0 +1,4918 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "CommerceAPI",
+        "description": "",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsstage.commerceapi.io\/"
+    ],
+    "paths": {
+        "\/api\/v1\/Acknowledgements\/{LogicbrokerKey}": {
+            "get": {
+                "summary": "Get acknowledgement details",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AcknowledgementGetAck",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements\/CustomXML": {
+            "post": {
+                "summary": "Create acknowledgement(s) based on custom XML.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AcknowledgementUploadCustomXml",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xmlType",
+                        "in": "query",
+                        "description": "XML type, leave blank unless directed otherwise."
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "XML data to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements\/Request": {
+            "post": {
+                "summary": "Request an acknowledgement from a trading partner",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AcknowledgementRequestAck",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Acknowledgement",
+                        "in": "body",
+                        "description": "Acknowledgement request object"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements": {
+            "get": {
+                "summary": "Search acknowledgements",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AcknowledgementSearchAcks",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filters.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filters.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filters.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filters.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filters.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filters.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filters.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filters.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filters.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create an acknowledgement",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AcknowledgementCreateAck",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Acknowledgement",
+                        "in": "body",
+                        "description": "Acknowledgement request object"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/Status\/{Status}": {
+            "put": {
+                "summary": "Update acknowledgement status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AcknowledgementUpdateAckStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Status",
+                        "in": "path",
+                        "description": "The Status."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/Status": {
+            "get": {
+                "summary": "Retrieve acknowledgement status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AcknowledgementGetAckStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements\/Export": {
+            "get": {
+                "summary": "Export to CSV\/XLSX",
+                "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+                "operationId": "AcknowledgementGetDocumentExportToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "The fields to export."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "filter.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filter.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filter.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filter.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filter.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filter.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filter.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filter.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filter.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/EDI": {
+            "get": {
+                "summary": "Retrieve EDI",
+                "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+                "operationId": "AcknowledgementGetDocumentEDI",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Acknowledgements\/Import": {
+            "post": {
+                "summary": "Import from flat file.",
+                "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+                "operationId": "AcknowledgementImport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "aliases",
+                        "in": "query",
+                        "description": "List of field names and aliases"
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "dryRun",
+                        "in": "query",
+                        "description": "Return shipment list instead of saving"
+                    },
+                    {
+                        "name": "custom",
+                        "in": "query",
+                        "description": "False for standard format, true if using custom mapping configured by Logicbroker"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/ActivityEvents": {
+            "get": {
+                "summary": "Get events for given fitlers",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ActivityEventSearchActivityEvent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filters.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filters.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filters.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "Filters.logicbrokerKey",
+                        "in": "query",
+                        "description": "Gets or sets the order number."
+                    },
+                    {
+                        "name": "Filters.documentType",
+                        "in": "query",
+                        "description": "Gets or sets the shipment number."
+                    },
+                    {
+                        "name": "Filters.typeId",
+                        "in": "query",
+                        "description": "Gets or sets the event type id."
+                    },
+                    {
+                        "name": "Filters.category",
+                        "in": "query",
+                        "description": "Gets or sets the invoice number."
+                    },
+                    {
+                        "name": "Filters.level",
+                        "in": "query",
+                        "description": "Gets or sets the status."
+                    },
+                    {
+                        "name": "filters.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "Filters.senderId",
+                        "in": "query",
+                        "description": "Gets or sets the partner company id."
+                    },
+                    {
+                        "name": "Filters.receiverId",
+                        "in": "query",
+                        "description": "Gets or sets the company id."
+                    },
+                    {
+                        "name": "Filters.processed",
+                        "in": "query",
+                        "description": "Gets or sets the company id."
+                    },
+                    {
+                        "name": "Filters.viewed",
+                        "in": "query",
+                        "description": "Gets or sets the company id."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create an activity event.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ActivityEventCreateEvent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ActivityEvent",
+                        "in": "body",
+                        "description": "The Activity Event."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/ActivityEvents\/{EventId}": {
+            "get": {
+                "summary": "Gets the event with the specified id.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ActivityEventGetActivityEvent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "EventId",
+                        "in": "path",
+                        "description": "The id to search for."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update activity event",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ActivityEventUpdateActivityEvent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "EventId",
+                        "in": "path",
+                        "description": "The id to search for."
+                    },
+                    {
+                        "name": "ActivityEvent",
+                        "in": "body",
+                        "description": "The Activity Event."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/ActivityEvents\/EventTypes": {
+            "get": {
+                "summary": "Gets a list of all possible event types.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ActivityEventGetEventTypes",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/v1\/Attachments": {
+            "get": {
+                "summary": "Get a list of all attachments matching a given filter.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AttachmentGetList",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Attachment type"
+                    },
+                    {
+                        "name": "receiverId",
+                        "in": "query",
+                        "description": "Receiver account number"
+                    },
+                    {
+                        "name": "logicbrokerKey",
+                        "in": "query",
+                        "description": "Logicbroker key"
+                    },
+                    {
+                        "name": "acknowledged",
+                        "in": "query",
+                        "description": "Acknowledged flag"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Upload an attachment",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AttachmentUpload",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Attachment type"
+                    },
+                    {
+                        "name": "receiverId",
+                        "in": "query",
+                        "description": "Receiver account number"
+                    },
+                    {
+                        "name": "logicbrokerKey",
+                        "in": "query",
+                        "description": "Logicbroker key"
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "Attachment description"
+                    },
+                    {
+                        "name": "url",
+                        "in": "query",
+                        "description": "URL of file to attach"
+                    },
+                    {
+                        "name": "notify",
+                        "in": "query",
+                        "description": "If true, create an activty event"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "XML data to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Attachments\/{container}\/{name}": {
+            "get": {
+                "summary": "Retrieve a file from Logicbroker storage.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "AttachmentDownloadWithCoId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "container",
+                        "in": "path",
+                        "description": "File container (ex. edidocs, attachments)"
+                    },
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "File name"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Document\/Script\/{ScriptName}": {
+            "get": {
+                "summary": "Execute custom handler.",
+                "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+                "operationId": "DocumentGetCustomScript",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ScriptName",
+                        "in": "path",
+                        "description": "The custom script name."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Execute custom handler.",
+                "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+                "operationId": "DocumentPostCustomScript",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ScriptName",
+                        "in": "path",
+                        "description": "The custom script name."
+                    }
+                ]
+            },
+            "options": {
+                "summary": "Execute custom handler.",
+                "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+                "operationId": "DocumentOptionsCustomScript",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "ScriptName",
+                        "in": "path",
+                        "description": "The custom script name."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Inventory\/{partnerId}": {
+            "get": {
+                "summary": "Download inventory as CSV.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InventoryDownload",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "modifiedAfter",
+                        "in": "query",
+                        "description": "Only items modified after this time"
+                    },
+                    {
+                        "name": "mapped",
+                        "in": "query",
+                        "description": "Set to false to view items with no merchant SKU"
+                    },
+                    {
+                        "name": "transform",
+                        "in": "query",
+                        "description": "Transform CSV (if configured)"
+                    },
+                    {
+                        "name": "includeNullQuantity",
+                        "in": "query",
+                        "description": "Set to true to include items with null quantity"
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Import inventory from CSV.",
+                "description": "Request rate limited to 1 request per second with bursts up to 2 requests.",
+                "operationId": "InventoryUpload",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "transform",
+                        "in": "query",
+                        "description": "Transform CSV (if configured)"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete all inventory records.",
+                "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
+                "operationId": "InventoryDeleteAll",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Inventory\/Broadcast": {
+            "post": {
+                "summary": "Import inventory from CSV.",
+                "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
+                "operationId": "InventoryBroadcast",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "transform",
+                        "in": "query",
+                        "description": "Transform CSV (if configured)"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Inventory\/{partnerId}\/Matching": {
+            "post": {
+                "summary": "Match items with CSV.",
+                "description": "Request rate limited to 1 request per second with bursts up to 2 requests.",
+                "operationId": "InventoryUploadMatching",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete all SKU mappings.",
+                "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
+                "operationId": "InventoryDeleteMappings",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Inventory\/{partnerId}\/Resend": {
+            "put": {
+                "summary": "Resend all inventory items.",
+                "description": "Request rate limited to 1 request every 5 minutes with bursts up to 2 requests.",
+                "operationId": "InventoryResendAll",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Inventory\/{partnerId}\/Item\/{sku}": {
+            "get": {
+                "summary": "Get a single item by SKU",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InventoryGetItem",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "sku",
+                        "in": "path",
+                        "description": "Item SKU"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Inventory\/Availability\/{sku}": {
+            "get": {
+                "summary": "Get the availability of an item across all suppliers.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InventoryGetAvailability",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "sku",
+                        "in": "path",
+                        "description": "Item SKU"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/CustomXML": {
+            "post": {
+                "summary": "Create invoice(s) based on custom XML.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InvoiceUploadCustomXml",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xmlType",
+                        "in": "query",
+                        "description": "XML type, leave blank unless directed otherwise."
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "XML data to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices": {
+            "get": {
+                "summary": "Get invoices based on provided filters",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InvoiceSearchInvoice",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filters.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filters.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filters.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filters.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filters.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filters.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filters.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filters.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filters.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new invoice",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InvoiceCreateInvoice",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "invoice",
+                        "in": "body",
+                        "description": "The invoice to save."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/{LogicbrokerKey}\/Events": {
+            "get": {
+                "summary": "Retrieve related events",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InvoiceGetActivityEvent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/{LogicbrokerKey}\/EDI": {
+            "get": {
+                "summary": "Retrieve EDI",
+                "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+                "operationId": "InvoiceGetDocumentEDI",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/Import": {
+            "post": {
+                "summary": "Import from flat file.",
+                "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+                "operationId": "InvoiceImport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "aliases",
+                        "in": "query",
+                        "description": "List of field names and aliases"
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "dryRun",
+                        "in": "query",
+                        "description": "Return shipment list instead of saving"
+                    },
+                    {
+                        "name": "custom",
+                        "in": "query",
+                        "description": "False for standard format, true if using custom mapping configured by Logicbroker"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/Export": {
+            "get": {
+                "summary": "Export to CSV\/XLSX",
+                "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+                "operationId": "InvoiceGetDocumentExportToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "The fields to export."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "filter.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filter.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filter.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filter.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filter.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filter.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filter.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filter.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filter.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/{LogicbrokerKey}": {
+            "get": {
+                "summary": "Returns the invoice with the specified key.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InvoiceGetInvoice",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/{LogicbrokerKey}\/Status": {
+            "get": {
+                "summary": "Return the current status code of an invoice.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InvoiceGetInvoiceStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Invoices\/{LogicbrokerKey}\/Status\/{Status}": {
+            "put": {
+                "summary": "Updates an invoice to the specified status.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "InvoiceUpdateInvoiceStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Status",
+                        "in": "path",
+                        "description": "The Status."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/Invoices": {
+            "get": {
+                "summary": "Retrieve a list of invoices for an order",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetInvoice",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Creates invoice and links with the given order",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderCreateInvoiceForSalesOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "invoice",
+                        "in": "body",
+                        "description": "The invoice to save."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/CustomXML": {
+            "post": {
+                "summary": "Create order(s) based on custom XML.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderUploadCustomXml",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xmlType",
+                        "in": "query",
+                        "description": "XML type, leave blank unless directed otherwise."
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "XML data to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders": {
+            "get": {
+                "summary": "Search orders",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderSearchSalesOrders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filters.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filters.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filters.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filters.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filters.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filters.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filters.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filters.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filters.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create an order",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderCreateSalesOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "SalesOrder",
+                        "in": "body",
+                        "description": "Order object"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/Shipments": {
+            "get": {
+                "summary": "Retrieve a list of shipments for an order",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetASN",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "The create shipment for sales order.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderCreateShipmentForSalesOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Shipment",
+                        "in": "body",
+                        "description": "The shipment."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/Events": {
+            "get": {
+                "summary": "Retrieve related events",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetActivityEvent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/Returns": {
+            "get": {
+                "summary": "Retrieve a list of returns for an order",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetReturns",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "post": {
+                "summary": "The create return for sales order.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderCreateReturnForSalesOrder",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Return",
+                        "in": "body",
+                        "description": "The shipment."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/EDI": {
+            "get": {
+                "summary": "Retrieve EDI",
+                "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+                "operationId": "OrderGetDocumentEDI",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/Import": {
+            "post": {
+                "summary": "Import from flat file.",
+                "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+                "operationId": "OrderImport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "aliases",
+                        "in": "query",
+                        "description": "List of field names and aliases"
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "dryRun",
+                        "in": "query",
+                        "description": "Return shipment list instead of saving"
+                    },
+                    {
+                        "name": "custom",
+                        "in": "query",
+                        "description": "False for standard format, true if using custom mapping configured by Logicbroker"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/Export": {
+            "get": {
+                "summary": "Export to CSV\/XLSX",
+                "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.logicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+                "operationId": "OrderGetDocumentExportToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "The fields to export."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "filter.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filter.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filter.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filter.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filter.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filter.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filter.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filter.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filter.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/PickList": {
+            "get": {
+                "summary": "Get pick list for one order",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetOrderPickList",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "ViewInBrowser",
+                        "in": "query",
+                        "description": "Set to true to view the resulting link in the browser."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/PickList": {
+            "get": {
+                "summary": "Get pick lists for multiple orders",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetOrderPickListToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "ViewInBrowser",
+                        "in": "query",
+                        "description": "Set to true to view the resulting link in the browser."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}": {
+            "get": {
+                "summary": "Retrieve an order",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetSalesOrderDetails",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/Status": {
+            "get": {
+                "summary": "Retrieve order status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderGetSalesOrderStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/Status\/{Status}": {
+            "put": {
+                "summary": "Update order status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "OrderUpdateSalesOrderStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Status",
+                        "in": "path",
+                        "description": "The Status."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/ShippingOptions": {
+            "get": {
+                "summary": "Get shipping\/tracking label options.",
+                "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+                "operationId": "OrderGetShippingOptions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Orders\/{LogicbrokerKey}\/TrackingLabel": {
+            "post": {
+                "summary": "Generate a tracking label for a given package",
+                "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+                "operationId": "OrderCreateTrackingLabel",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "package",
+                        "in": "body",
+                        "description": "Package details"
+                    },
+                    {
+                        "name": "useSenderAccount",
+                        "in": "query",
+                        "description": "Set to true to use the sender's shipping account"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Partners": {
+            "get": {
+                "summary": "Retrieve a list of trading partners.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "PartnerGetPartners",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/v1\/Product\/{partnerId}": {
+            "post": {
+                "summary": "Import product from CSV.",
+                "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+                "operationId": "ProductUpload",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Product\/{partnerId}\/{feedId}": {
+            "get": {
+                "summary": "Get product feed status.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ProductGetFeedStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "feedId",
+                        "in": "path",
+                        "description": "Feed identifier"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Send product feed.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ProductSendFeed",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "feedId",
+                        "in": "path",
+                        "description": "Feed identifier"
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete product feed.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ProductDeleteFeed",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "feedId",
+                        "in": "path",
+                        "description": "Feed identifier"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items": {
+            "get": {
+                "summary": "Get items in the product feed.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ProductGetFeedItems",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "feedId",
+                        "in": "path",
+                        "description": "Feed identifier"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "isCompliant",
+                        "in": "query",
+                        "description": "Compliant filter"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items\/{productId}": {
+            "get": {
+                "summary": "Get product feed item.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ProductGetFeedItem",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "feedId",
+                        "in": "path",
+                        "description": "Feed identifier"
+                    },
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "Product identifier within the feed."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update product feed item.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ProductUpdateFeedItem",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "feedId",
+                        "in": "path",
+                        "description": "Feed identifier"
+                    },
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "Product identifier within the feed."
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "XML data to upload"
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Remove product feed item.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ProductRemoveFeedItem",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "partnerId",
+                        "in": "path",
+                        "description": "Partner account number"
+                    },
+                    {
+                        "name": "feedId",
+                        "in": "path",
+                        "description": "Feed identifier"
+                    },
+                    {
+                        "name": "productId",
+                        "in": "path",
+                        "description": "Product identifier within the feed."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/{LogicbrokerKey}": {
+            "get": {
+                "summary": "Get return details",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ReturnGetReturn",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/CustomXML": {
+            "post": {
+                "summary": "Create return(s) based on custom XML.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ReturnUploadCustomXml",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xmlType",
+                        "in": "query",
+                        "description": "XML type, leave blank unless directed otherwise."
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "XML data to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/Request": {
+            "post": {
+                "summary": "Request a return",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ReturnCreateReturnRequest",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Return",
+                        "in": "body",
+                        "description": "The shipment."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns": {
+            "get": {
+                "summary": "Search returns",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ReturnSearchReturns",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filters.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filters.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filters.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filters.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filters.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filters.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filters.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filters.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filters.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a return",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ReturnCreateReturn",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Return",
+                        "in": "body",
+                        "description": "The shipment."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/{LogicbrokerKey}\/Status\/{Status}": {
+            "put": {
+                "summary": "Update return status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ReturnUpdateReturnStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Status",
+                        "in": "path",
+                        "description": "The Status."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/{LogicbrokerKey}\/Status": {
+            "get": {
+                "summary": "Retrieve return status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ReturnGetReturnStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/Export": {
+            "get": {
+                "summary": "Export to CSV\/XLSX",
+                "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+                "operationId": "ReturnGetDocumentExportToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "The fields to export."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "filter.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filter.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filter.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filter.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filter.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filter.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filter.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filter.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filter.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/{LogicbrokerKey}\/EDI": {
+            "get": {
+                "summary": "Retrieve EDI",
+                "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+                "operationId": "ReturnGetDocumentEDI",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Returns\/Import": {
+            "post": {
+                "summary": "Import from flat file.",
+                "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+                "operationId": "ReturnImport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "aliases",
+                        "in": "query",
+                        "description": "List of field names and aliases"
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "dryRun",
+                        "in": "query",
+                        "description": "Return shipment list instead of saving"
+                    },
+                    {
+                        "name": "custom",
+                        "in": "query",
+                        "description": "False for standard format, true if using custom mapping configured by Logicbroker"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/CustomXML": {
+            "post": {
+                "summary": "Create shipment(s) based on custom XML.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentUploadCustomXml",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "xmlType",
+                        "in": "query",
+                        "description": "XML type, leave blank unless directed otherwise."
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    },
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "description": "XML data to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments": {
+            "get": {
+                "summary": "Get shipments for given filters",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentSearchShipment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "filters.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filters.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filters.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filters.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filters.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filters.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filters.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filters.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filters.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filters.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new shipment",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentCreateShipment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Shipment",
+                        "in": "body",
+                        "description": "The shipment."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/{LogicbrokerKey}\/Events": {
+            "get": {
+                "summary": "Retrieve related events",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetActivityEvent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/{LogicbrokerKey}\/EDI": {
+            "get": {
+                "summary": "Retrieve EDI",
+                "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+                "operationId": "ShipmentGetDocumentEDI",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/Import": {
+            "post": {
+                "summary": "Import from flat file.",
+                "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+                "operationId": "ShipmentImport",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "aliases",
+                        "in": "query",
+                        "description": "List of field names and aliases"
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "dryRun",
+                        "in": "query",
+                        "description": "Return shipment list instead of saving"
+                    },
+                    {
+                        "name": "custom",
+                        "in": "query",
+                        "description": "False for standard format, true if using custom mapping configured by Logicbroker"
+                    },
+                    {
+                        "name": "file",
+                        "in": "formData",
+                        "description": "File to upload"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/Export": {
+            "get": {
+                "summary": "Export to CSV\/XLSX",
+                "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.logicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+                "operationId": "ShipmentGetDocumentExportToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "The fields to export."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "delimiter",
+                        "in": "query",
+                        "description": "The column delimiter to use for CSV export."
+                    },
+                    {
+                        "name": "filter.partnerPO",
+                        "in": "query",
+                        "description": "The partner's purchase order number."
+                    },
+                    {
+                        "name": "filter.sourceKey",
+                        "in": "query",
+                        "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO."
+                    },
+                    {
+                        "name": "filter.status",
+                        "in": "query",
+                        "description": "The status of the document. Use Status endpoint to view valid Statuses."
+                    },
+                    {
+                        "name": "filter.from",
+                        "in": "query",
+                        "description": "Beginning of time search window."
+                    },
+                    {
+                        "name": "filter.to",
+                        "in": "query",
+                        "description": "End of time search window."
+                    },
+                    {
+                        "name": "filter.page",
+                        "in": "query",
+                        "description": "Page number"
+                    },
+                    {
+                        "name": "filter.pageSize",
+                        "in": "query",
+                        "description": "Page size"
+                    },
+                    {
+                        "name": "filter.receiverCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.senderCompanyId",
+                        "in": "query",
+                        "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids."
+                    },
+                    {
+                        "name": "filter.linkkey",
+                        "in": "query",
+                        "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices."
+                    },
+                    {
+                        "name": "filter.advanced",
+                        "in": "query",
+                        "description": "Advanced query options."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/{LogicbrokerKey}": {
+            "get": {
+                "summary": "Get shipment details",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update shipment details",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentUpdateShipment",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Shipment",
+                        "in": "body",
+                        "description": "The shipment."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/{LogicbrokerKey}\/PackingSlip": {
+            "get": {
+                "summary": "Get packing slips for one shipment",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipmentPackingSlip",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/PackingSlip": {
+            "get": {
+                "summary": "Get packing slips for multiple shipments",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipmentPackingSlipsToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Get packing slips for a shipment before submitting",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipmentPackingSlipsToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "Shipment",
+                        "in": "body",
+                        "description": "The shipment."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/ShippingLabel": {
+            "get": {
+                "summary": "Get shipping labels for multiple shipments",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipmentShippingLabelToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKeys",
+                        "in": "query",
+                        "description": "The logicbroker keys."
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "containerCode",
+                        "in": "query",
+                        "description": "Specific container code"
+                    },
+                    {
+                        "name": "ViewInBrowser",
+                        "in": "query",
+                        "description": "Set to true to view the resulting link in the browser."
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Get shipping labels for a shipment before submitting",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipmentShippingLabelToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "Shipment",
+                        "in": "body",
+                        "description": "The shipment."
+                    },
+                    {
+                        "name": "containerCode",
+                        "in": "query",
+                        "description": "Specific container code"
+                    },
+                    {
+                        "name": "ViewInBrowser",
+                        "in": "query",
+                        "description": "Set to true to view the resulting link in the browser."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/{LogicbrokerKey}\/ShippingLabel": {
+            "get": {
+                "summary": "Get shipping labels for one shipment.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipmentShippingSingleLabelToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "fileType",
+                        "in": "query",
+                        "description": "Valid options are csv, xlsx, xml, json and legacy."
+                    },
+                    {
+                        "name": "containerCode",
+                        "in": "query",
+                        "description": "Specific container code"
+                    },
+                    {
+                        "name": "ViewInBrowser",
+                        "in": "query",
+                        "description": "Set to true to view the resulting link in the browser."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/{LogicbrokerKey}\/status": {
+            "get": {
+                "summary": "Get shipment status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetShipmentStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/{LogicbrokerKey}\/status\/{Status}": {
+            "put": {
+                "summary": "Update shipment status",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentUpdateShipmentStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "LogicbrokerKey",
+                        "in": "path",
+                        "description": ""
+                    },
+                    {
+                        "name": "Status",
+                        "in": "path",
+                        "description": "The Status."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Shipments\/ContainerCode": {
+            "get": {
+                "summary": "Gets a new SSCC18 container code.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "ShipmentGetContainerCode",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "containerType",
+                        "in": "query",
+                        "description": "Container type, valid types are \"box\" and \"pallet\"."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Statuses": {
+            "get": {
+                "summary": "Get configured document statuses for each document",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "StatusGetDocumentStatuses",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api\/v1\/Statuses\/{documentType}": {
+            "get": {
+                "summary": "Get configured document statuses for each document",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "StatusGetDocumentStatusesByType",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "documentType",
+                        "in": "path",
+                        "description": "Document type"
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Webhooks": {
+            "get": {
+                "summary": "Get list of webhooks",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "WebhookGetWebHooks",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a new webhook",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "WebhookCreateWebhook",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Webhook",
+                        "in": "body",
+                        "description": "The new webhook."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Webhooks\/{WebhookId}": {
+            "get": {
+                "summary": "Get webhook details",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "WebhookGetWebhook",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "WebhookId",
+                        "in": "path",
+                        "description": "The webhook id."
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a webhook",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "WebhookUpdateWebhook",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "WebhookId",
+                        "in": "path",
+                        "description": "The webhook id."
+                    },
+                    {
+                        "name": "Webhook",
+                        "in": "body",
+                        "description": "The new webhook."
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a webhook.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "WebhookDeleteWebhook",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "WebhookId",
+                        "in": "path",
+                        "description": "The webhook id."
+                    }
+                ]
+            }
+        },
+        "\/api\/v1\/Webhooks\/{WebhookId}\/Test": {
+            "get": {
+                "summary": "Test a webhook endpoint.",
+                "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+                "operationId": "WebhookTestWebhook",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "WebhookId",
+                        "in": "path",
+                        "description": "The webhook id."
+                    },
+                    {
+                        "name": "logicbrokerKey",
+                        "in": "query",
+                        "description": "Logicbroker key"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "LBMessage[Acknowledgement]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Acknowledgement": {
+                "type": "object",
+                "properties": {
+                    "Type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "AcknowledgementNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PartnerPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VendorNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ChangeReason": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "AcknowledgementDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ScheduledShipDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "AckLines": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DocumentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StatusCode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Contact": {
+                "type": "object",
+                "properties": {
+                    "CompanyName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "FirstName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LastName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Address1": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Address2": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "City": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "State": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Country": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Zip": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Province": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "AddressCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StateCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CountryCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Phone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ContactID": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ContactType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TaxNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "FaxNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DataAttribute": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Value": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Section": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AckLine": {
+                "type": "object",
+                "properties": {
+                    "Type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "QuantityCancelled": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "QuantityBackordered": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Price": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PriceCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "RetailPrice": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "QuantityUOM": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ChangeReason": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LineNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "EntityIdentifier": {
+                "type": "object",
+                "properties": {
+                    "SourceKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DestinationKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LinkKey": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ItemIdentifier": {
+                "type": "object",
+                "properties": {
+                    "SupplierSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PartnerSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ParentSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ManufacturerSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExternalSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ASIN": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "UPC": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ISBN": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SerialNumber": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[String]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Body": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[CreateSalesOrderReponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateSalesOrderReponse": {
+                "type": "object",
+                "properties": {
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TransformationResults": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ExceptionDTO": {
+                "type": "object",
+                "properties": {
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StackTrace": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[ArrayResponse[DocumentPartial]]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ArrayResponse[DocumentPartial]": {
+                "type": "object",
+                "properties": {
+                    "Records": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CurrentPage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalRecords": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DocumentPartial": {
+                "type": "object",
+                "properties": {
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SourceKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReferenceNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Object": {
+                "type": "object"
+            },
+            "LBMessage[LBDocumentStatus]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBDocumentStatus": {
+                "type": "object",
+                "properties": {
+                    "Status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ErrorMessage": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBActivityEvent": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DocumentType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LinkKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TypeId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Level": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Category": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Summary": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Details": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Processed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Viewed": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "AdditionalData": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetActivityEventResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetActivityEventResponse": {
+                "type": "object",
+                "properties": {
+                    "ActivityEvents": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[LBActivityEvent]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[Int32]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Body": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[List[LBEventType]]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Body": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBEventType": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[ArrayResponse[LBAttachment]]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ArrayResponse[LBAttachment]": {
+                "type": "object",
+                "properties": {
+                    "Records": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CurrentPage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalRecords": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBAttachment": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Size": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Acknowledged": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CreateDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExpireDate": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[LBInventoryItem]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBInventoryItem": {
+                "type": "object",
+                "properties": {
+                    "SupplierSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SupplierId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "MerchantId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "UPC": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "MerchantDescription": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SupplierDescription": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ManufacturerSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "MerchantSKU": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Cost": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "MSRP": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "RetailPrice": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Size": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Color": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Style": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Weight": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "NextAvailableQuantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "NextAvailableDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "UOM": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "WarehouseQuantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse2": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse2Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse3": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse3Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse4": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse4Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse5": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Warehouse5Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LastUpdate": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ArrayResponse[LBInventoryItem]": {
+                "type": "object",
+                "properties": {
+                    "Records": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CurrentPage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalRecords": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Invoice": {
+                "type": "object",
+                "properties": {
+                    "InvoiceLines": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "InvoiceNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "InvoiceDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "InvoiceTotal": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VendorNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CustomerNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DepartmentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PartnerPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SupplierPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Discounts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Taxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Payments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentInfos": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Currency": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "HandlingAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "HandlingTaxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "WarehouseCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DocumentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StatusCode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OrderLine": {
+                "type": "object",
+                "properties": {
+                    "Price": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PriceCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "RetailPrice": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Cost": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "MSRP": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Discounts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentInfos": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Taxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "WarehouseCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "IsDropShip": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "QuantityUOM": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LineNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Weight": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "WeightUOM": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Discount": {
+                "type": "object",
+                "properties": {
+                    "DiscountCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DiscountName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DiscountPercent": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DiscountAmount": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Tax": {
+                "type": "object",
+                "properties": {
+                    "TaxTitle": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TaxCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TaxAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TaxRate": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Payment": {
+                "type": "object",
+                "properties": {
+                    "Method": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PaymentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Amount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReferenceId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PaymentTerm": {
+                "type": "object",
+                "properties": {
+                    "TermsDescription": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PayInNumberOfDays": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DiscountInNumberOfDays": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "AvailableDiscount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DueDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DiscountDueDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "EffectiveDate": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ShipmentInfo": {
+                "type": "object",
+                "properties": {
+                    "DateShipped": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CarrierCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ClassCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderClassCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverClassCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ServiceLevelCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ServiceLevelDescription": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TrackingNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShippingDiscounts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SellerFullfillmentId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentCost": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentTaxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "InsuranceCost": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ContainerCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Qty": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ContainerType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentContainerParentCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Height": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Width": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Length": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DimensionUnit": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Weight": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "WeightUnit": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CartonsPerPallet": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LayersPerPallet": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[CreateInvoiceResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateInvoiceResponse": {
+                "type": "object",
+                "properties": {
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TransformationResults": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetInvoicePartialResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetInvoicePartialResponse": {
+                "type": "object",
+                "properties": {
+                    "Invoices": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "InvoicePartial": {
+                "type": "object",
+                "properties": {
+                    "InvoiceNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "InvoiceDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetInvoiceResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetInvoiceResponse": {
+                "type": "object"
+            },
+            "LBMessage[SalesOrderInvoices]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SalesOrderInvoices": {
+                "type": "object",
+                "properties": {
+                    "Invoices": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SalesOrder": {
+                "type": "object",
+                "properties": {
+                    "RequestedShipDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DoNotShipBefore": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DoNotShipAfter": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TypeCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReleaseNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SalesRequirement": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderLines": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VendorNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CustomerNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DepartmentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PartnerPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SupplierPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Discounts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Taxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Payments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentInfos": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Currency": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "HandlingAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "HandlingTaxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "WarehouseCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DocumentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StatusCode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetSalesOrderPartialResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetSalesOrderPartialResponse": {
+                "type": "object",
+                "properties": {
+                    "SalesOrders": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SalesOrderPartial": {
+                "type": "object",
+                "properties": {
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Shipment": {
+                "type": "object",
+                "properties": {
+                    "ShipmentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExpectedDeliveryDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "InvoiceNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "BillofLading": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PRONumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentLines": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VendorNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CustomerNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DepartmentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PartnerPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SupplierPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Discounts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Taxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Payments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentInfos": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Currency": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "HandlingAmount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "HandlingTaxes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "WarehouseCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DocumentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StatusCode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[CreateShipmentReponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateShipmentReponse": {
+                "type": "object",
+                "properties": {
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TransformationResults": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[SalesOrderShipments]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SalesOrderShipments": {
+                "type": "object",
+                "properties": {
+                    "Shipments": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ArrayResponse[Return]": {
+                "type": "object",
+                "properties": {
+                    "Records": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CurrentPage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalRecords": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Return": {
+                "type": "object",
+                "properties": {
+                    "ReturnNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReturnDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "OrderDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PartnerPO": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VendorNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Note": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReturnLines": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SenderCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReceiverCompanyId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "DocumentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StatusCode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ReturnLine": {
+                "type": "object",
+                "properties": {
+                    "Quantity": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Price": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "PriceCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "RetailPrice": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "QuantityUOM": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReturnReason": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ReturnReasonCode": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LineNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ExtendedAttributes": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetSalesOrdersResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetSalesOrdersResponse": {
+                "type": "object"
+            },
+            "TrackingLabelOptions": {
+                "type": "object",
+                "properties": {
+                    "HasSenderAccount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "HasReceiverAccount": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PackageRequest": {
+                "type": "object"
+            },
+            "TrackingLabel": {
+                "type": "object",
+                "properties": {
+                    "Link": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TrackingNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ClassCode": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetPartnersResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetPartnersResponse": {
+                "type": "object",
+                "properties": {
+                    "Partners": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Partner": {
+                "type": "object",
+                "properties": {
+                    "CompanyName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "VendorCodes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "IsMerchant": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "VendorCode": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "System": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "FeedUploadResult": {
+                "type": "object",
+                "properties": {
+                    "FeedId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ProductFeed": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "IsCompliant": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CompliantCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ErrorMessage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ItemCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Fields": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Mappings": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "FieldMapping": {
+                "type": "object",
+                "properties": {
+                    "SourceField": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TargetField": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ArrayResponse[ProductItem]": {
+                "type": "object",
+                "properties": {
+                    "Records": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CurrentPage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalRecords": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ProductItem": {
+                "type": "object",
+                "properties": {
+                    "IsCompliant": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Data": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ErrorMessage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "KeyValue": {
+                "type": "object",
+                "properties": {
+                    "Key": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Value": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[Return]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetShipmentPartialResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetShipmentPartialResponse": {
+                "type": "object",
+                "properties": {
+                    "Shipments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "TotalPages": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ShipmentPartial": {
+                "type": "object",
+                "properties": {
+                    "ShipmentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ShipmentDate": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "LogicbrokerKey": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[GetShipmentResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetShipmentResponse": {
+                "type": "object"
+            },
+            "LBMessage[GetDocumentStatusesResponse]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetDocumentStatusesResponse": {
+                "type": "object",
+                "properties": {
+                    "DocumentTypeStatuses": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DocumentTypeStatus": {
+                "type": "object",
+                "properties": {
+                    "DocumentType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StatusDescription": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "StatusId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Default": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "WebhookDetails": {
+                "type": "object",
+                "properties": {
+                    "Id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Format": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Address": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Topic": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Enabled": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "CreatedAt": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "UpdatedAt": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "SharedSecret": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[WebhookDetails[]]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Body": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LBMessage[WebhookDetails]": {
+                "type": "object",
+                "properties": {
+                    "Code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "Message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
