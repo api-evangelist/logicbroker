@@ -1,0 +1,4874 @@
+{
+    "id": "a9c1e2831c7072ca05eae093b01ae7e1",
+    "name": "CommerceAPI",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "8c932a616f1adb6891e31b245f27b154",
+            "name": "Get acknowledgement details",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "1b77e0057756e2c67cf9d71c7ac29b48",
+            "name": "Create acknowledgement(s) based on custom XML.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/CustomXML",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "xmlType",
+                    "description": "XML type, leave blank unless directed otherwise.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "data",
+                    "description": "XML data to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "dc175c0485b71b81c657f90d48f598d9",
+            "name": "Request an acknowledgement from a trading partner",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/Request",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Acknowledgement",
+                    "description": "Acknowledgement request object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a5f1ac772b2e4b979c8edf56f0770bbc",
+            "name": "Search acknowledgements",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filters.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "dfb0c6d0a5d66002d9f9de8a8dee11d8",
+            "name": "Create an acknowledgement",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Acknowledgement",
+                    "description": "Acknowledgement request object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "6662bddf65912331f6dcc9f9b174b983",
+            "name": "Update acknowledgement status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/Status\/{Status}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Status",
+                    "description": "The Status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "1a69f5d0939f070465215cf88f13ec63",
+            "name": "Retrieve acknowledgement status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/Status",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "1d2f7370c37610143a54327e248ca0e7",
+            "name": "Export to CSV\/XLSX",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/Export",
+            "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "The fields to export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "03be8d6ff58aab6366b8a256f34f29d9",
+            "name": "Retrieve EDI",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/EDI",
+            "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "edf37fa299678e0dce421650e0daed4f",
+            "name": "Import from flat file.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/Import",
+            "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "aliases",
+                    "description": "List of field names and aliases",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "dryRun",
+                    "description": "Return shipment list instead of saving",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "custom",
+                    "description": "False for standard format, true if using custom mapping configured by Logicbroker",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a8e8a1d825d348de6e28094b7fefd307",
+            "name": "Get events for given fitlers",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filters.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.logicbrokerKey",
+                    "description": "Gets or sets the order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.documentType",
+                    "description": "Gets or sets the shipment number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.typeId",
+                    "description": "Gets or sets the event type id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.category",
+                    "description": "Gets or sets the invoice number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.level",
+                    "description": "Gets or sets the status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.senderId",
+                    "description": "Gets or sets the partner company id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.receiverId",
+                    "description": "Gets or sets the company id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.processed",
+                    "description": "Gets or sets the company id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Filters.viewed",
+                    "description": "Gets or sets the company id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "7d512ea0689056e35407d495691e7a82",
+            "name": "Create an activity event.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ActivityEvent",
+                    "description": "The Activity Event.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "2ccc1a38e26d99933b4a16720e5d2a2b",
+            "name": "Gets the event with the specified id.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents\/{EventId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "EventId",
+                    "description": "The id to search for.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "025aa91caacf35e3f9c29c0778c210e1",
+            "name": "Update activity event",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents\/{EventId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "EventId",
+                    "description": "The id to search for.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ActivityEvent",
+                    "description": "The Activity Event.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "e64225266abd00d61acacf7fe057185b",
+            "name": "Gets a list of all possible event types.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents\/EventTypes",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "50628b4e478ab288cc0fee8af84181f4",
+            "name": "Get a list of all attachments matching a given filter.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Attachments",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "type",
+                    "description": "Attachment type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "receiverId",
+                    "description": "Receiver account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "logicbrokerKey",
+                    "description": "Logicbroker key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "acknowledged",
+                    "description": "Acknowledged flag",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "08cb7632b33c5bc5256471edd44e2fd2",
+            "name": "Upload an attachment",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Attachments",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "type",
+                    "description": "Attachment type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "receiverId",
+                    "description": "Receiver account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "logicbrokerKey",
+                    "description": "Logicbroker key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "description",
+                    "description": "Attachment description",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "url",
+                    "description": "URL of file to attach",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "notify",
+                    "description": "If true, create an activty event",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "data",
+                    "description": "XML data to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "811596eac4cbb1baf3c16a59db0b41f2",
+            "name": "Retrieve a file from Logicbroker storage.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Attachments\/{container}\/{name}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "container",
+                    "description": "File container (ex. edidocs, attachments)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "name",
+                    "description": "File name",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "41d9d156ab513739fdb094e9be7a7335",
+            "name": "Execute custom handler.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Document\/Script\/{ScriptName}",
+            "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ScriptName",
+                    "description": "The custom script name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "81451fc8a896660cc0db136c9e9dee4b",
+            "name": "Execute custom handler.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Document\/Script\/{ScriptName}",
+            "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ScriptName",
+                    "description": "The custom script name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a59105e833c1c82faedaa2735073e9cb",
+            "name": "Execute custom handler.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Document\/Script\/{ScriptName}",
+            "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "options",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "ScriptName",
+                    "description": "The custom script name.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d0859feae501d2bdcb533986336e8a73",
+            "name": "Download inventory as CSV.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "modifiedAfter",
+                    "description": "Only items modified after this time",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "mapped",
+                    "description": "Set to false to view items with no merchant SKU",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "transform",
+                    "description": "Transform CSV (if configured)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "includeNullQuantity",
+                    "description": "Set to true to include items with null quantity",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "14b1c887c884f4a1f65f1b1a8bb93257",
+            "name": "Import inventory from CSV.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}",
+            "description": "Request rate limited to 1 request per second with bursts up to 2 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "transform",
+                    "description": "Transform CSV (if configured)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "ccd12b5cf5daab40867890cecef2f1c8",
+            "name": "Delete all inventory records.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}",
+            "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "dcf34bf6d2006803f975341b91b61331",
+            "name": "Import inventory from CSV.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/Broadcast",
+            "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "transform",
+                    "description": "Transform CSV (if configured)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d14728fcee7ec5deb23e2683b85737dc",
+            "name": "Match items with CSV.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Matching",
+            "description": "Request rate limited to 1 request per second with bursts up to 2 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d1ea11a504d60d109483eef05d706562",
+            "name": "Delete all SKU mappings.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Matching",
+            "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "60e020414587665d11dc23cfacc827e6",
+            "name": "Resend all inventory items.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Resend",
+            "description": "Request rate limited to 1 request every 5 minutes with bursts up to 2 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "965a135597793bed2fefde2bf011d510",
+            "name": "Get a single item by SKU",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Item\/{sku}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "sku",
+                    "description": "Item SKU",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "da0d7e3818a02579c8fc1f0a82ed1ffb",
+            "name": "Get the availability of an item across all suppliers.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/Availability\/{sku}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "sku",
+                    "description": "Item SKU",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "98909107aa89932c78a7654a39f9413a",
+            "name": "Create invoice(s) based on custom XML.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/CustomXML",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "xmlType",
+                    "description": "XML type, leave blank unless directed otherwise.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "data",
+                    "description": "XML data to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "ecbc8d84dc7e67eb61b38597bd4091f2",
+            "name": "Get invoices based on provided filters",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filters.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "885ad2425b0e5e0deb3a1f2df4b4ebac",
+            "name": "Create a new invoice",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "invoice",
+                    "description": "The invoice to save.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "67c1a5c9a7558e6c146184d71fee1e6a",
+            "name": "Retrieve related events",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/Events",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "70517677ce5c448304974cdb8ff2a2fa",
+            "name": "Retrieve EDI",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/EDI",
+            "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "34fc1063449abfc449a9148110c26e08",
+            "name": "Import from flat file.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/Import",
+            "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "aliases",
+                    "description": "List of field names and aliases",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "dryRun",
+                    "description": "Return shipment list instead of saving",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "custom",
+                    "description": "False for standard format, true if using custom mapping configured by Logicbroker",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a7e372c6075f595fea6dab3484a3bf8a",
+            "name": "Export to CSV\/XLSX",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/Export",
+            "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "The fields to export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "83f36437de5002decfd4abcbf807b240",
+            "name": "Returns the invoice with the specified key.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "9fe0524c9fa9a0b95a8056fe89d83336",
+            "name": "Return the current status code of an invoice.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/Status",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "e816716397859c28b60710ee1d3d40a8",
+            "name": "Updates an invoice to the specified status.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/Status\/{Status}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Status",
+                    "description": "The Status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "2c6792b26ea8fc7b63dbfcf3fb96d394",
+            "name": "Retrieve a list of invoices for an order",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Invoices",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "cb851e414140420a1c23df290994f360",
+            "name": "Creates invoice and links with the given order",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Invoices",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "invoice",
+                    "description": "The invoice to save.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "9a0eb8eda07dcc4b2c766b552028db1f",
+            "name": "Create order(s) based on custom XML.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/CustomXML",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "xmlType",
+                    "description": "XML type, leave blank unless directed otherwise.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "data",
+                    "description": "XML data to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "36177a6de1db2a1909032881393bccd8",
+            "name": "Search orders",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filters.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "7d493ba1b920253fa25d91d40cb8480d",
+            "name": "Create an order",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "SalesOrder",
+                    "description": "Order object",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a1306b74b0a7dbbbfd58a51ff5b13dd9",
+            "name": "Retrieve a list of shipments for an order",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Shipments",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "bd172979456a41a482b65bbfcfa61231",
+            "name": "The create shipment for sales order.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Shipments",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Shipment",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "8f2b59a47507b07738bbc2ce0d68d974",
+            "name": "Retrieve related events",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Events",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "7bcecb23ad35b5b3a36ce42436d9014f",
+            "name": "Retrieve a list of returns for an order",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Returns",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "5087f26e487b98d79a8d14292bedfbbc",
+            "name": "The create return for sales order.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Returns",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Return",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "b875e5351f38ee5185cb2cb337e7bb82",
+            "name": "Retrieve EDI",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/EDI",
+            "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "04ab0cf65d889990fc87b98151f28501",
+            "name": "Import from flat file.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/Import",
+            "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "aliases",
+                    "description": "List of field names and aliases",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "dryRun",
+                    "description": "Return shipment list instead of saving",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "custom",
+                    "description": "False for standard format, true if using custom mapping configured by Logicbroker",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "b57ec2c1df1cc96f286f74036502880c",
+            "name": "Export to CSV\/XLSX",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/Export",
+            "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.logicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "The fields to export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "1b2db52b99de2516bceaefd22d0354e8",
+            "name": "Get pick list for one order",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/PickList",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ViewInBrowser",
+                    "description": "Set to true to view the resulting link in the browser.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "287c84f0247161bb3a24dd1d60b728a3",
+            "name": "Get pick lists for multiple orders",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/PickList",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ViewInBrowser",
+                    "description": "Set to true to view the resulting link in the browser.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "67c2112f8a0d8be2ad1f6ffe4f88873a",
+            "name": "Retrieve an order",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "eaf5c8286077b761f14d9da7252d374b",
+            "name": "Retrieve order status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Status",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "8cfcfdb278b8896e2100645749f29349",
+            "name": "Update order status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Status\/{Status}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Status",
+                    "description": "The Status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "557d4f908c8cef2e5ce677cd2a6f8a5c",
+            "name": "Get shipping\/tracking label options.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/ShippingOptions",
+            "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "3c621484a3f2a35758193e53b881159b",
+            "name": "Generate a tracking label for a given package",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/TrackingLabel",
+            "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "package",
+                    "description": "Package details",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "useSenderAccount",
+                    "description": "Set to true to use the sender's shipping account",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "dcf32189306b55ed7045e740aa77c0e8",
+            "name": "Retrieve a list of trading partners.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Partners",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "e4bcb53520da0212d8f6e7d6a4b20462",
+            "name": "Import product from CSV.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}",
+            "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d2088bb0bd8a61cb5956667e39738595",
+            "name": "Get product feed status.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feedId",
+                    "description": "Feed identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "600c5823f639939dedceb4cbfa8095d3",
+            "name": "Send product feed.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feedId",
+                    "description": "Feed identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "0ed98ea4284792c8d27fd5ef7e9a823a",
+            "name": "Delete product feed.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feedId",
+                    "description": "Feed identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "52eaf15472433bd86dabfa31933c69da",
+            "name": "Get items in the product feed.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feedId",
+                    "description": "Feed identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "isCompliant",
+                    "description": "Compliant filter",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "689c554411cdf10cb619f271180553f4",
+            "name": "Get product feed item.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items\/{productId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feedId",
+                    "description": "Feed identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "productId",
+                    "description": "Product identifier within the feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "53b652f5514aab28135b544c0e699cef",
+            "name": "Update product feed item.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items\/{productId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feedId",
+                    "description": "Feed identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "productId",
+                    "description": "Product identifier within the feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "data",
+                    "description": "XML data to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "0e6e37e90b35e9c09dd48ab52a12bfd4",
+            "name": "Remove product feed item.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items\/{productId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "partnerId",
+                    "description": "Partner account number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "feedId",
+                    "description": "Feed identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "productId",
+                    "description": "Product identifier within the feed.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "334636ad5021af45dfd326295af27964",
+            "name": "Get return details",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "3cfdf41a7406c0568e437eaa888d8d38",
+            "name": "Create return(s) based on custom XML.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/CustomXML",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "xmlType",
+                    "description": "XML type, leave blank unless directed otherwise.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "data",
+                    "description": "XML data to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "dcb13d05b20e5b8c44643bc3a7184945",
+            "name": "Request a return",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/Request",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Return",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "41cc1afb1095bab972a8f004bc42c84a",
+            "name": "Search returns",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filters.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a024adea01476f527279a80b11b8ec57",
+            "name": "Create a return",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Return",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "5d8173991331020b78989a9c7341101d",
+            "name": "Update return status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}\/Status\/{Status}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Status",
+                    "description": "The Status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "18f6ca5d444c15b85dfa625b7ca8069a",
+            "name": "Retrieve return status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}\/Status",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "497a09a3bc948aaadda3da46c41ca928",
+            "name": "Export to CSV\/XLSX",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/Export",
+            "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "The fields to export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "fbb623092cb7c5476752f7a19ebfa34d",
+            "name": "Retrieve EDI",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}\/EDI",
+            "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "1f99f594bee478aedb36802b6f76e538",
+            "name": "Import from flat file.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/Import",
+            "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "aliases",
+                    "description": "List of field names and aliases",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "dryRun",
+                    "description": "Return shipment list instead of saving",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "custom",
+                    "description": "False for standard format, true if using custom mapping configured by Logicbroker",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "ceacb59cac8f6e1a272ac4ca1f5e42a2",
+            "name": "Create shipment(s) based on custom XML.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/CustomXML",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "xmlType",
+                    "description": "XML type, leave blank unless directed otherwise.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "data",
+                    "description": "XML data to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a2a065aa70ead46e7a6d894e6cc6b2df",
+            "name": "Get shipments for given filters",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "filters.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filters.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "a1482ad158cc8067ba3e860d7c912c1c",
+            "name": "Create a new shipment",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Shipment",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "91cd8ea3e17647efdce758a3c00d794f",
+            "name": "Retrieve related events",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/Events",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "827adb8787dad8dbb901d084d10cbb44",
+            "name": "Retrieve EDI",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/EDI",
+            "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "bf7d357311e9526625a122472e89ad39",
+            "name": "Import from flat file.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/Import",
+            "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "aliases",
+                    "description": "List of field names and aliases",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "dryRun",
+                    "description": "Return shipment list instead of saving",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "custom",
+                    "description": "False for standard format, true if using custom mapping configured by Logicbroker",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "file",
+                    "description": "File to upload",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "f594d1d7f424cb9a153b936d532a23ea",
+            "name": "Export to CSV\/XLSX",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/Export",
+            "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.logicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fields",
+                    "description": "The fields to export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "delimiter",
+                    "description": "The column delimiter to use for CSV export.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.partnerPO",
+                    "description": "The partner's purchase order number.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.sourceKey",
+                    "description": "Source key is usually the unique key the sender uses to find this document. Sometime this might be the same as the PartnerPO.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.status",
+                    "description": "The status of the document. Use Status endpoint to view valid Statuses.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.from",
+                    "description": "Beginning of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.to",
+                    "description": "End of time search window.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.page",
+                    "description": "Page number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.pageSize",
+                    "description": "Page size",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.receiverCompanyId",
+                    "description": "This Id is indicate who is received this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.senderCompanyId",
+                    "description": "This Id is indicate who is sent this document. Use the Partner endpoint to discovery valid company Ids.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.linkkey",
+                    "description": "The linkkey identifies a group of related documents. It ties the Order to all the Shipments and Invoices.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "filter.advanced",
+                    "description": "Advanced query options.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "8b36afa14f5dbb08918d638d463b09b7",
+            "name": "Get shipment details",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "0a9b1b081d8f732ef23bd8c031c1b652",
+            "name": "Update shipment details",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Shipment",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "68b49006b824818a9bc4174f9883bb25",
+            "name": "Get packing slips for one shipment",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/PackingSlip",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "f830e9e8615875cbdd0a6cd8c632d93f",
+            "name": "Get packing slips for multiple shipments",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/PackingSlip",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "27b057e20f2747de8c773271250e7cbb",
+            "name": "Get packing slips for a shipment before submitting",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/PackingSlip",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Shipment",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "29d2228a6520c4d44b08201db9880aca",
+            "name": "Get shipping labels for multiple shipments",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/ShippingLabel",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKeys",
+                    "description": "The logicbroker keys.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "containerCode",
+                    "description": "Specific container code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ViewInBrowser",
+                    "description": "Set to true to view the resulting link in the browser.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "8a1ca8b681276f0bd9f9b80514985b86",
+            "name": "Get shipping labels for a shipment before submitting",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/ShippingLabel",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Shipment",
+                    "description": "The shipment.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "containerCode",
+                    "description": "Specific container code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ViewInBrowser",
+                    "description": "Set to true to view the resulting link in the browser.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "29a6cee75b072afec8b6467444480e8b",
+            "name": "Get shipping labels for one shipment.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/ShippingLabel",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "fileType",
+                    "description": "Valid options are csv, xlsx, xml, json and legacy.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "containerCode",
+                    "description": "Specific container code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ViewInBrowser",
+                    "description": "Set to true to view the resulting link in the browser.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "c195042a9a856121679d809eff193cbc",
+            "name": "Get shipment status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/status",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "bc235362425e130f1c8522061c4d0493",
+            "name": "Update shipment status",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/status\/{Status}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LogicbrokerKey",
+                    "description": "",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Status",
+                    "description": "The Status.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "abe2c2a4931ef0d84592ed5e133395e0",
+            "name": "Gets a new SSCC18 container code.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/ContainerCode",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "containerType",
+                    "description": "Container type, valid types are \"box\" and \"pallet\".",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "63dca61c5f6f2569f8da0bc092b98740",
+            "name": "Get configured document statuses for each document",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Statuses",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d725c6c94d5889f4b017242680a8f0d4",
+            "name": "Get configured document statuses for each document",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Statuses\/{documentType}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "documentType",
+                    "description": "Document type",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "2794a5877533223c71690d300e2e7992",
+            "name": "Get list of webhooks",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "931941c75a51274131a2de253850901f",
+            "name": "Create a new webhook",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Webhook",
+                    "description": "The new webhook.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d1eeaf23aeb019c8e9fc10da40768cec",
+            "name": "Get webhook details",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WebhookId",
+                    "description": "The webhook id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "d6dfa87b94f9825066e6366fd1b01243",
+            "name": "Update a webhook",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WebhookId",
+                    "description": "The webhook id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Webhook",
+                    "description": "The new webhook.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "dd88cfbd9b13beb4968f97b291526afb",
+            "name": "Delete a webhook.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WebhookId",
+                    "description": "The webhook id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        },
+        {
+            "id": "df729e377a5057006f54c9834f887ade",
+            "name": "Test a webhook endpoint.",
+            "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}\/Test",
+            "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "WebhookId",
+                    "description": "The webhook id.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "logicbrokerKey",
+                    "description": "Logicbroker key",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "rawModeData": ""
+        }
+    ]
+}
