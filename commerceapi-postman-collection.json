@@ -1,5 +1,5 @@
 {
-    "id": "a9c1e2831c7072ca05eae093b01ae7e1",
+    "id": "001e1ae2bc496621e8f388e29c8cf68d",
     "name": "CommerceAPI",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "8c932a616f1adb6891e31b245f27b154",
+            "id": "731329016fb4bf362606886eb6fb1130",
             "name": "Get acknowledgement details",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "1b77e0057756e2c67cf9d71c7ac29b48",
+            "id": "bd8dea15db94eb5874c4f3ae1495b79a",
             "name": "Create acknowledgement(s) based on custom XML.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/CustomXML",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -82,11 +82,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "dc175c0485b71b81c657f90d48f598d9",
+            "id": "bbcc8b12beee541772358ba1c7f104bc",
             "name": "Request an acknowledgement from a trading partner",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/Request",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -113,11 +113,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a5f1ac772b2e4b979c8edf56f0770bbc",
+            "id": "8e11e4c5ed475a77d3695c4f2bdb26e5",
             "name": "Search acknowledgements",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -214,11 +214,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "dfb0c6d0a5d66002d9f9de8a8dee11d8",
+            "id": "2b9a4bf3f212421701b1995e4df1767c",
             "name": "Create an acknowledgement",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -245,11 +245,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "6662bddf65912331f6dcc9f9b174b983",
+            "id": "cf5ccad6cdcc84209d3a5c706309756e",
             "name": "Update acknowledgement status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/Status\/{Status}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -283,11 +283,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "1a69f5d0939f070465215cf88f13ec63",
+            "id": "530f95cbde981901fbbf4dc880e409ae",
             "name": "Retrieve acknowledgement status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/Status",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -314,11 +314,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "1d2f7370c37610143a54327e248ca0e7",
+            "id": "c6599969c6aab5813ee58718ac2a65ab",
             "name": "Export to CSV\/XLSX",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/Export",
             "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
@@ -443,11 +443,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "03be8d6ff58aab6366b8a256f34f29d9",
+            "id": "0b2646ddbbc36ab62dfe94ce608c2838",
             "name": "Retrieve EDI",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/{LogicbrokerKey}\/EDI",
             "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
@@ -474,11 +474,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "edf37fa299678e0dce421650e0daed4f",
+            "id": "8f9b5f706d903c3a041daca64b48e0bd",
             "name": "Import from flat file.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Acknowledgements\/Import",
             "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
@@ -540,11 +540,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a8e8a1d825d348de6e28094b7fefd307",
+            "id": "4a02d8029b1d1d8841a4ee85765a6cde",
             "name": "Get events for given fitlers",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -655,11 +655,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "7d512ea0689056e35407d495691e7a82",
+            "id": "0c98a70d673594bd111cb4fcaaf9fcb4",
             "name": "Create an activity event.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -686,11 +686,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "2ccc1a38e26d99933b4a16720e5d2a2b",
+            "id": "abbf254a034c1fa8cb9f0618a67a21cc",
             "name": "Gets the event with the specified id.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents\/{EventId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -717,11 +717,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "025aa91caacf35e3f9c29c0778c210e1",
+            "id": "a7d109e39472b9af71d3fe8b1bce2b08",
             "name": "Update activity event",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents\/{EventId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -755,11 +755,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "e64225266abd00d61acacf7fe057185b",
+            "id": "e5c79484a9576ecae6a6bdc4f8613be2",
             "name": "Gets a list of all possible event types.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/ActivityEvents\/EventTypes",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -778,11 +778,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "50628b4e478ab288cc0fee8af84181f4",
+            "id": "af3a5cb7a45466107f5659b1b68ab509",
             "name": "Get a list of all attachments matching a given filter.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Attachments",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -837,11 +837,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "08cb7632b33c5bc5256471edd44e2fd2",
+            "id": "eac8a0c19d7faef1b50c5d7ee91ebc42",
             "name": "Upload an attachment",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Attachments",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -917,11 +917,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "811596eac4cbb1baf3c16a59db0b41f2",
+            "id": "dbea5a510a0c245edce67919388d8afc",
             "name": "Retrieve a file from Logicbroker storage.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Attachments\/{container}\/{name}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -955,11 +955,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "41d9d156ab513739fdb094e9be7a7335",
+            "id": "60ba06e2f8e41f3ad0976dd2d3673685",
             "name": "Execute custom handler.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Document\/Script\/{ScriptName}",
             "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
@@ -986,11 +986,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "81451fc8a896660cc0db136c9e9dee4b",
+            "id": "5385a3a18148e0fc3c83fb06671e3015",
             "name": "Execute custom handler.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Document\/Script\/{ScriptName}",
             "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
@@ -1017,11 +1017,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a59105e833c1c82faedaa2735073e9cb",
+            "id": "fb2dc477c5d26396062c156fe312fa1a",
             "name": "Execute custom handler.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Document\/Script\/{ScriptName}",
             "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
@@ -1048,11 +1048,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "d0859feae501d2bdcb533986336e8a73",
+            "id": "5a785d86ac9d72d3ebea87067d8d459e",
             "name": "Download inventory as CSV.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1114,11 +1114,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "14b1c887c884f4a1f65f1b1a8bb93257",
+            "id": "5dcb3edfaad4c468742ddcfb68a5472e",
             "name": "Import inventory from CSV.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}",
             "description": "Request rate limited to 1 request per second with bursts up to 2 requests.",
@@ -1159,11 +1159,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "ccd12b5cf5daab40867890cecef2f1c8",
+            "id": "bba3f57a705e6b87c75e858180473401",
             "name": "Delete all inventory records.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}",
             "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
@@ -1190,11 +1190,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "dcf34bf6d2006803f975341b91b61331",
+            "id": "39f9fdbdca6251fc574694c1cea247f8",
             "name": "Import inventory from CSV.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/Broadcast",
             "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
@@ -1228,11 +1228,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "d14728fcee7ec5deb23e2683b85737dc",
+            "id": "b96e1413c58b12516bfe1291004b2be1",
             "name": "Match items with CSV.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Matching",
             "description": "Request rate limited to 1 request per second with bursts up to 2 requests.",
@@ -1266,11 +1266,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "d1ea11a504d60d109483eef05d706562",
+            "id": "072820b3ac79435f374987ff2242f3c2",
             "name": "Delete all SKU mappings.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Matching",
             "description": "Request rate limited to 1 request every 60 seconds with bursts up to 2 requests.",
@@ -1297,11 +1297,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "60e020414587665d11dc23cfacc827e6",
+            "id": "3478c3a779f068b1f3a586766a983c34",
             "name": "Resend all inventory items.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Resend",
             "description": "Request rate limited to 1 request every 5 minutes with bursts up to 2 requests.",
@@ -1328,11 +1328,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "965a135597793bed2fefde2bf011d510",
+            "id": "02a93760f39fb16bd583028c81c1876a",
             "name": "Get a single item by SKU",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/{partnerId}\/Item\/{sku}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1366,11 +1366,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "da0d7e3818a02579c8fc1f0a82ed1ffb",
+            "id": "48ec5549235831fa5559e3afcedd73c1",
             "name": "Get the availability of an item across all suppliers.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Inventory\/Availability\/{sku}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1397,11 +1397,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "98909107aa89932c78a7654a39f9413a",
+            "id": "76a09ab3473be8cd8cd2c317756ce528",
             "name": "Create invoice(s) based on custom XML.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/CustomXML",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1442,11 +1442,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "ecbc8d84dc7e67eb61b38597bd4091f2",
+            "id": "c26a05dc6e434fbe5b3e18aa59538016",
             "name": "Get invoices based on provided filters",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1543,11 +1543,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "885ad2425b0e5e0deb3a1f2df4b4ebac",
+            "id": "f99abbc00d53bfa8ead9a5f558e70aa8",
             "name": "Create a new invoice",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1574,11 +1574,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "67c1a5c9a7558e6c146184d71fee1e6a",
+            "id": "9089b9982b4b5deb49f33a70e1a0d166",
             "name": "Retrieve related events",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/Events",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1605,11 +1605,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "70517677ce5c448304974cdb8ff2a2fa",
+            "id": "fe9dcb48c78436bf4fe3cf1d7908cbf2",
             "name": "Retrieve EDI",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/EDI",
             "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
@@ -1636,11 +1636,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "34fc1063449abfc449a9148110c26e08",
+            "id": "816eb59e46340a72826d30520c1da438",
             "name": "Import from flat file.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/Import",
             "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
@@ -1702,11 +1702,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a7e372c6075f595fea6dab3484a3bf8a",
+            "id": "7798186b8463f29e1940619ded686577",
             "name": "Export to CSV\/XLSX",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/Export",
             "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
@@ -1831,11 +1831,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "83f36437de5002decfd4abcbf807b240",
+            "id": "6d128cc0277f13002d9c6e8843b50e1b",
             "name": "Returns the invoice with the specified key.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1862,11 +1862,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "9fe0524c9fa9a0b95a8056fe89d83336",
+            "id": "b4ec214fa02c2165c64813f01a8e7f5d",
             "name": "Return the current status code of an invoice.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/Status",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1893,11 +1893,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "e816716397859c28b60710ee1d3d40a8",
+            "id": "ac39659c62a62990039157d0ea52ac55",
             "name": "Updates an invoice to the specified status.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Invoices\/{LogicbrokerKey}\/Status\/{Status}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1931,11 +1931,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "2c6792b26ea8fc7b63dbfcf3fb96d394",
+            "id": "394dd83fca36544019871bbe4ad67e6e",
             "name": "Retrieve a list of invoices for an order",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Invoices",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -1962,11 +1962,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "cb851e414140420a1c23df290994f360",
+            "id": "df8311baa49f926fb62ba6dd851328e7",
             "name": "Creates invoice and links with the given order",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Invoices",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2000,11 +2000,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "9a0eb8eda07dcc4b2c766b552028db1f",
+            "id": "781b5d1122ab4ce9eb28b93c6f00f0c3",
             "name": "Create order(s) based on custom XML.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/CustomXML",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2045,11 +2045,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "36177a6de1db2a1909032881393bccd8",
+            "id": "80f37f1b13eb8ba782a8da9f4cf40e38",
             "name": "Search orders",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2146,11 +2146,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "7d493ba1b920253fa25d91d40cb8480d",
+            "id": "ac97d0bb3f6b529605ea714457d0dac2",
             "name": "Create an order",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2177,11 +2177,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a1306b74b0a7dbbbfd58a51ff5b13dd9",
+            "id": "61b4bd65fcf2d5e6aea7e91eac2de010",
             "name": "Retrieve a list of shipments for an order",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Shipments",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2208,11 +2208,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "bd172979456a41a482b65bbfcfa61231",
+            "id": "a8233f7d8e6e4393f8b11117cebbd2f3",
             "name": "The create shipment for sales order.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Shipments",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2246,11 +2246,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "8f2b59a47507b07738bbc2ce0d68d974",
+            "id": "6bc9d4da06a2f48bf898705a924aae3f",
             "name": "Retrieve related events",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Events",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2277,11 +2277,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "7bcecb23ad35b5b3a36ce42436d9014f",
+            "id": "facd7dae4cbc22969e1a1bc858a52aa8",
             "name": "Retrieve a list of returns for an order",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Returns",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2308,11 +2308,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "5087f26e487b98d79a8d14292bedfbbc",
+            "id": "8a28b9acfe489017908b82b950c1a380",
             "name": "The create return for sales order.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Returns",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2346,11 +2346,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "b875e5351f38ee5185cb2cb337e7bb82",
+            "id": "8b2b36dd04214786060eb49ed07823eb",
             "name": "Retrieve EDI",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/EDI",
             "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
@@ -2377,11 +2377,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "04ab0cf65d889990fc87b98151f28501",
+            "id": "2137a2fc4ab5fed1ed92efa4703c0726",
             "name": "Import from flat file.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/Import",
             "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
@@ -2443,11 +2443,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "b57ec2c1df1cc96f286f74036502880c",
+            "id": "720a704dd56d598bf72a43737bb2db9d",
             "name": "Export to CSV\/XLSX",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/Export",
             "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.logicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
@@ -2572,11 +2572,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "1b2db52b99de2516bceaefd22d0354e8",
+            "id": "fb1723407519e831b6ee6fc162a78f52",
             "name": "Get pick list for one order",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/PickList",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2617,11 +2617,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "287c84f0247161bb3a24dd1d60b728a3",
+            "id": "458b06b6057b5e0ed029e9e897183280",
             "name": "Get pick lists for multiple orders",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/PickList",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2662,11 +2662,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "67c2112f8a0d8be2ad1f6ffe4f88873a",
+            "id": "41a1404b36b55db84fce0b4d413be859",
             "name": "Retrieve an order",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2693,11 +2693,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "eaf5c8286077b761f14d9da7252d374b",
+            "id": "fbe14badbfc7cea0e8f159fcbe9a3e3d",
             "name": "Retrieve order status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Status",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2724,11 +2724,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "8cfcfdb278b8896e2100645749f29349",
+            "id": "ecceaf8bef9a633527081d0b8f8e2251",
             "name": "Update order status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/Status\/{Status}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2762,11 +2762,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "557d4f908c8cef2e5ce677cd2a6f8a5c",
+            "id": "79548611856362c70dda0e0446123709",
             "name": "Get shipping\/tracking label options.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/ShippingOptions",
             "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
@@ -2793,11 +2793,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "3c621484a3f2a35758193e53b881159b",
+            "id": "ceb9fde7349d57ef2c79219e8a349282",
             "name": "Generate a tracking label for a given package",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Orders\/{LogicbrokerKey}\/TrackingLabel",
             "description": "Request rate limited to 2 requests per second with bursts up to 25 requests.",
@@ -2838,11 +2838,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "dcf32189306b55ed7045e740aa77c0e8",
+            "id": "0453ea96a62e6230c7f16c7865b47b7b",
             "name": "Retrieve a list of trading partners.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Partners",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2861,11 +2861,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "e4bcb53520da0212d8f6e7d6a4b20462",
+            "id": "d0ae9c8bd38f2a7bbb83f5bf1e55152a",
             "name": "Import product from CSV.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}",
             "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
@@ -2899,11 +2899,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "d2088bb0bd8a61cb5956667e39738595",
+            "id": "6ab73291cce35fef65abd2961250f635",
             "name": "Get product feed status.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2937,11 +2937,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "600c5823f639939dedceb4cbfa8095d3",
+            "id": "c2f6c90b0ce13dcaa3ef1b31f651827a",
             "name": "Send product feed.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -2975,11 +2975,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "0ed98ea4284792c8d27fd5ef7e9a823a",
+            "id": "32a7cc78bba5e3c2ee8ed957e5bb687a",
             "name": "Delete product feed.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3013,11 +3013,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "52eaf15472433bd86dabfa31933c69da",
+            "id": "9b7302cfa341ba5cf79cdf1f85105cd0",
             "name": "Get items in the product feed.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3072,11 +3072,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "689c554411cdf10cb619f271180553f4",
+            "id": "ba1b0ceb648156b7a9559701b1ddb11f",
             "name": "Get product feed item.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items\/{productId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3117,11 +3117,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "53b652f5514aab28135b544c0e699cef",
+            "id": "d1783172a43a6a3c77b8f6917a97eb42",
             "name": "Update product feed item.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items\/{productId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3169,11 +3169,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "0e6e37e90b35e9c09dd48ab52a12bfd4",
+            "id": "2716102e05e7ee38ff468144fdcf0cf0",
             "name": "Remove product feed item.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Product\/{partnerId}\/{feedId}\/Items\/{productId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3214,11 +3214,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "334636ad5021af45dfd326295af27964",
+            "id": "8778f3f53ea95d1c62f9480948659645",
             "name": "Get return details",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3245,11 +3245,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "3cfdf41a7406c0568e437eaa888d8d38",
+            "id": "96c4fda0e8fd4602afa17f13456abf0c",
             "name": "Create return(s) based on custom XML.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/CustomXML",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3290,11 +3290,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "dcb13d05b20e5b8c44643bc3a7184945",
+            "id": "12925405aa3331469d6c04415f5704b1",
             "name": "Request a return",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/Request",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3321,11 +3321,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "41cc1afb1095bab972a8f004bc42c84a",
+            "id": "b21713590158a9194bc3f48be4023192",
             "name": "Search returns",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3422,11 +3422,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a024adea01476f527279a80b11b8ec57",
+            "id": "d5e4e2e5792183ee038e664f87bf9b9d",
             "name": "Create a return",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3453,11 +3453,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "5d8173991331020b78989a9c7341101d",
+            "id": "723a2a478790bef6138a6863a7dab06d",
             "name": "Update return status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}\/Status\/{Status}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3491,11 +3491,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "18f6ca5d444c15b85dfa625b7ca8069a",
+            "id": "d309a2210df91a03e5f57aa2ba02b932",
             "name": "Retrieve return status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}\/Status",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3522,11 +3522,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "497a09a3bc948aaadda3da46c41ca928",
+            "id": "dee7fb04df5cddad2b154c6f9f60f83e",
             "name": "Export to CSV\/XLSX",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/Export",
             "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.LogicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
@@ -3651,11 +3651,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "fbb623092cb7c5476752f7a19ebfa34d",
+            "id": "b406059e655db6386c5315a520c7d949",
             "name": "Retrieve EDI",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/{LogicbrokerKey}\/EDI",
             "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
@@ -3682,11 +3682,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "1f99f594bee478aedb36802b6f76e538",
+            "id": "14086c2543ec08bba788672c255db2de",
             "name": "Import from flat file.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Returns\/Import",
             "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
@@ -3748,11 +3748,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "ceacb59cac8f6e1a272ac4ca1f5e42a2",
+            "id": "a43079db687fc7940062154d55d2eb07",
             "name": "Create shipment(s) based on custom XML.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/CustomXML",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3793,11 +3793,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a2a065aa70ead46e7a6d894e6cc6b2df",
+            "id": "169599156c5d4d02b0135fe73f01fe15",
             "name": "Get shipments for given filters",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3894,11 +3894,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "a1482ad158cc8067ba3e860d7c912c1c",
+            "id": "749dcb118d156b15255ed90c515028b3",
             "name": "Create a new shipment",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3925,11 +3925,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "91cd8ea3e17647efdce758a3c00d794f",
+            "id": "b358c5fae602ffea024f0a6e13f9660d",
             "name": "Retrieve related events",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/Events",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -3956,11 +3956,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "827adb8787dad8dbb901d084d10cbb44",
+            "id": "4178e0c2a2d6f7f6351fecd60e31b469",
             "name": "Retrieve EDI",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/EDI",
             "description": "Returns the latest EDI related to this document that was either sent or received by Logicbroker. The EDI output may also contain other documents that were in the same batch.",
@@ -3987,11 +3987,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "bf7d357311e9526625a122472e89ad39",
+            "id": "5d8dd25bc3c57b263cde4ccde2d00b6b",
             "name": "Import from flat file.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/Import",
             "description": "Request rate limited to 1 request per second with bursts up to 10 requests.",
@@ -4053,11 +4053,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "f594d1d7f424cb9a153b936d532a23ea",
+            "id": "a697247a76edc981a4b128d490ed6284",
             "name": "Export to CSV\/XLSX",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/Export",
             "description": "The 'fields' parameter accepts a comma delimited list of JSON paths, for example: 'Identifier.logicbrokerKey, BillToAddress.FirstName'. It is also possible to rename these fields using syntax like 'DocumentDate as Date' or 'DocumentDate Date'.\r\n            You must specify a value for either the 'LogicbrokerKeys' parameter or the 'filter' parameter.",
@@ -4182,11 +4182,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "8b36afa14f5dbb08918d638d463b09b7",
+            "id": "b0060dc684a04dd83150dec384714fa1",
             "name": "Get shipment details",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4213,11 +4213,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "0a9b1b081d8f732ef23bd8c031c1b652",
+            "id": "0c3f79ce3d2115091332f766b2cd7b20",
             "name": "Update shipment details",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4251,11 +4251,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "68b49006b824818a9bc4174f9883bb25",
+            "id": "8f6d3f4dc16f16f9587542fb6e56d4c7",
             "name": "Get packing slips for one shipment",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/PackingSlip",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4289,11 +4289,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "f830e9e8615875cbdd0a6cd8c632d93f",
+            "id": "afe54f0cba82ca0d34ad42154e6ebc5d",
             "name": "Get packing slips for multiple shipments",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/PackingSlip",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4327,11 +4327,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "27b057e20f2747de8c773271250e7cbb",
+            "id": "c953f430e45933134616e6526670260c",
             "name": "Get packing slips for a shipment before submitting",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/PackingSlip",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4365,11 +4365,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "29d2228a6520c4d44b08201db9880aca",
+            "id": "4176f8f352ea834fe963ec849381e8c4",
             "name": "Get shipping labels for multiple shipments",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/ShippingLabel",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4417,11 +4417,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "8a1ca8b681276f0bd9f9b80514985b86",
+            "id": "cff6dad7ceeeaf97a7b59901469f3c24",
             "name": "Get shipping labels for a shipment before submitting",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/ShippingLabel",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4469,11 +4469,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "29a6cee75b072afec8b6467444480e8b",
+            "id": "f803ca37aff1bbd99d763362fe02cad7",
             "name": "Get shipping labels for one shipment.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/ShippingLabel",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4521,11 +4521,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "c195042a9a856121679d809eff193cbc",
+            "id": "3815ce5548a3f9cfee0a7dc16d29b31e",
             "name": "Get shipment status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/status",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4552,11 +4552,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "bc235362425e130f1c8522061c4d0493",
+            "id": "59019b9df5311bd4a3ea55d88ce137d9",
             "name": "Update shipment status",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/{LogicbrokerKey}\/status\/{Status}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4590,11 +4590,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "abe2c2a4931ef0d84592ed5e133395e0",
+            "id": "3bb0c741560dba1da74305bb008e8aa3",
             "name": "Gets a new SSCC18 container code.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Shipments\/ContainerCode",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4621,11 +4621,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "63dca61c5f6f2569f8da0bc092b98740",
+            "id": "8d96879767711f8587d1865414f2572c",
             "name": "Get configured document statuses for each document",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Statuses",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4644,11 +4644,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "d725c6c94d5889f4b017242680a8f0d4",
+            "id": "70573a7f4b8fc94b897506372465e32b",
             "name": "Get configured document statuses for each document",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Statuses\/{documentType}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4675,11 +4675,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "2794a5877533223c71690d300e2e7992",
+            "id": "6a6784858e6f5f3ad65351c129b3f0ba",
             "name": "Get list of webhooks",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4698,11 +4698,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "931941c75a51274131a2de253850901f",
+            "id": "be705f81d46ea104a26ee561df834b39",
             "name": "Create a new webhook",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4729,11 +4729,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "d1eeaf23aeb019c8e9fc10da40768cec",
+            "id": "b504752be552b64d5e0d1942874a4e31",
             "name": "Get webhook details",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4760,11 +4760,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "d6dfa87b94f9825066e6366fd1b01243",
+            "id": "eed7af4971c8131ee49d6d043307f9f8",
             "name": "Update a webhook",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4798,11 +4798,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "dd88cfbd9b13beb4968f97b291526afb",
+            "id": "dd78fd188a36973f840904fd0d79f08d",
             "name": "Delete a webhook.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4829,11 +4829,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         },
         {
-            "id": "df729e377a5057006f54c9834f887ade",
+            "id": "7b3c09787c61ff222cfbf505a9462ef3",
             "name": "Test a webhook endpoint.",
             "url": "httpsstage.commerceapi.io\/\/api\/v1\/Webhooks\/{WebhookId}\/Test",
             "description": "Request rate limited to 10 requests per second with bursts up to 100 requests.",
@@ -4867,7 +4867,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a9c1e2831c7072ca05eae093b01ae7e1",
+            "collectionId": "001e1ae2bc496621e8f388e29c8cf68d",
             "rawModeData": ""
         }
     ]
